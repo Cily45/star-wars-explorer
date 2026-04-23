@@ -6,5 +6,5 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(),    tailwindcss(),
   ],
-  base: 'star-wars-explore',
+  base: '/star-wars-explore/',
 })
