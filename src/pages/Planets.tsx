@@ -42,7 +42,7 @@ const Planets = React.memo(function Planets () {
           }
           `}
           type="text"
-          placeholder="Rechercher un épisode..."
+          placeholder="Rechercher une planète..."
           value={search}
           onChange={handleSearchChange}
         />
@@ -55,7 +55,7 @@ const Planets = React.memo(function Planets () {
           ))
         ) : (
           <p className="col-span-full text-center text-lg italic opacity-70 mt-10">
-            Aucun holocron ne correspond à cette recherche...
+            Aucune planète ne correspond à cette recherche...
           </p>
         )}
       </div>
