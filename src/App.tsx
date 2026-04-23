@@ -8,10 +8,13 @@ import CharacterPage from './pages/CharacterPage.tsx'
 import PlanetPage from './pages/PlanetPage.tsx'
 import Movies from './pages/Movies.tsx'
 import MoviePage from './pages/MoviePage.tsx'
+import { useThemeToggle } from './contexts/ThemeToggleContext.tsx'
 
 function App () {
+  const context = useThemeToggle()
+
   return (
-    <>
+    <div className={`min-h-screen ${context.theme === 'dark' ? 'bg-slate-950' : 'bg-slate-100'}`}>
       <Header/>
 
       <main>
@@ -25,7 +28,7 @@ function App () {
           <Route path="/planete/:id" element={<PlanetPage/>}/>
         </Routes>
       </main>
-    </>
+    </div>
   )
 }
 
